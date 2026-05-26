@@ -3,6 +3,9 @@
     {{ range first 1 (where .Site.RegularPages "Type" "posts") }}
     <section class="hero">
       <p class="hero-label">✦ terbaru</p>
+      {{ with .Params.image }}
+      <img src="{{ . | absURL }}" alt="{{ $.Title }}" class="hero-cover">
+      {{ end }}
       <h1>{{ .Title }}</h1>
       <div class="hero-meta">
         <span>{{ .Date.Format "02 January 2006" }}</span>
