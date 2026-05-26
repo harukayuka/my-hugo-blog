@@ -1,0 +1,17 @@
+{{ define "main" }}
+<article class="post-content">
+  <h1>{{ .Title }}</h1>
+  <div class="meta">
+    <span>{{ .Date.Format "02 January 2006" }}</span>
+    <span class="dot"></span>
+    <span>{{ .ReadingTime }} menit baca</span>
+    {{ with .Params.tags }}
+    <span class="dot"></span>
+    <span>{{ index . 0 }}</span>
+    {{ end }}
+  </div>
+  <div class="content">
+    {{ .Content }}
+  </div>
+</article>
+{{ end }}

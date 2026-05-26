@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>tech | tulisan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f5f0e8;
+      --ink: #1a1612;
+      --muted: #8a7f72;
+      --accent: #c84b2f;
+      --line: #d6cfc4;
+      --card: #edeae2;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'DM Mono', monospace;
+      font-size: 14px;
+      line-height: 1.7;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+     
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 999;
+      opacity: 0.5;
+    }
+
+    header {
+      padding: 3rem 0 2rem;
+      border-bottom: 1px solid var(--line);
+      animation: fadeDown 0.7s ease both;
+    }
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .site-name {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(2.8rem, 8vw, 4.5rem);
+      line-height: 1;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+
+    .site-name a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .site-name span {
+      color: var(--accent);
+    }
+
+    .site-tagline {
+      margin-top: 0.6rem;
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    nav {
+      margin-top: 1.5rem;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      position: relative;
+      transition: color 0.2s;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      left: 0; bottom: -2px;
+      width: 0; height: 1px;
+      background: var(--accent);
+      transition: width 0.25s ease;
+    }
+
+    nav a:hover { color: var(--accent); }
+    nav a:hover::after { width: 100%; }
+
+    .hero {
+      padding: 4rem 0 3rem;
+      border-bottom: 1px solid var(--line);
+      animation: fadeUp 0.8s 0.15s ease both;
+    }
+
+    .hero-label {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      max-width: 520px;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--muted);
+    }
+
+    .hero-meta {
+      margin-top: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .hero-meta .dot {
+      width: 4px; height: 4px;
+      background: var(--line);
+      border-radius: 50%;
+    }
+
+    .read-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 2rem;
+      padding: 0.6rem 1.2rem;
+      background: var(--ink);
+      color: var(--bg);
+      text-decoration: none;
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .read-btn:hover {
+      background: var(--accent);
+      transform: translateX(3px);
+    }
+
+    .read-btn svg { transition: transform 0.2s; }
+    .read-btn:hover svg { transform: translateX(3px); }
+
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding: 2.5rem 0 1.2rem;
+    }
+
+    .posts {
+      animation: fadeUp 0.8s 0.3s ease both;
+    }
+
+    .post-item {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 1rem;
+      padding: 1.2rem 0;
+      border-bottom: 1px solid var(--line);
+      text-decoration: none;
+      color: inherit;
+      transition: background 0.15s;
+      cursor: pointer;
+    }
+
+    .post-item:hover .post-title { color: var(--accent); }
+    .post-item:hover .post-arrow { opacity: 1; transform: translateX(4px); }
+
+    .post-date {
+      font-size: 11px;
+      color: var(--muted);
+      padding-top: 0.15rem;
+      line-height: 1.4;
+    }
+
+    .post-body {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .post-title {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.1rem;
+      line-height: 1.3;
+      transition: color 0.2s;
+    }
+
+    .post-tag {
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      background: var(--card);
+      padding: 0.2rem 0.5rem;
+      white-space: nowrap;
+      margin-top: 0.1rem;
+    }
+
+    .post-arrow {
+      color: var(--accent);
+      opacity: 0;
+      transition: opacity 0.2s, transform 0.2s;
+      margin-top: 0.2rem;
+      font-size: 1rem;
+    }
+
+    .about-strip {
+      margin: 3rem 0;
+      padding: 2rem;
+      background: var(--card);
+      border-left: 3px solid var(--accent);
+      animation: fadeUp 0.8s 0.45s ease both;
+    }
+
+    .about-strip p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .about-strip strong {
+      color: var(--ink);
+      font-weight: 500;
+    }
+
+    footer {
+      padding: 2rem 0;
+      border-top: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: 0.05em;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.2rem;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--accent); }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--line); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--muted); }
+
+     
+    .post-content {
+      padding: 4rem 0;
+      animation: fadeUp 0.8s 0.2s ease both;
+    }
+    .post-content h1 {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      line-height: 1.1;
+      margin-bottom: 2rem;
+    }
+    .post-content .meta {
+      margin-bottom: 3rem;
+      color: var(--muted);
+      font-size: 12px;
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+    .post-content .content {
+      font-size: 16px;
+      line-height: 1.8;
+    }
+    .post-content .content p { margin-bottom: 1.5rem; }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <div class="site-name"><a href="/">tulisan<span>.</span></a></div>
+      <p class="site-tagline">catatan random dari kepala yang penuh</p>
+      <nav>
+        <a href="/">beranda</a>
+        <a href="/posts">arsip</a>
+        <a href="/about">tentang</a>
+      </nav>
+    </header>
+
+    
+<div class="posts">
+  <p class="section-label">— tech</p>
+  
+  <a class="post-item" href="/posts/setup-laptop/">
+    <div class="post-date">14 May<br/>2025</div>
+    <div class="post-body">
+      <div>
+        <div class="post-title">Setup laptop hemat yang tetap produktif</div>
+        
+        <span class="post-tag">tech</span>
+        
+      </div>
+      <span class="post-arrow">→</span>
+    </div>
+  </a>
+  
+</div>
+
+
+    <footer>
+      <span>© 2026 tulisan.</span>
+      <div class="footer-links">
+        <a href="https://github.com/">github</a>
+        <a href="/index.xml">rss</a>
+        <a href="mailto:hello@example.com">email</a>
+      </div>
+    </footer>
+  </div>
+
+</body>
+</html>

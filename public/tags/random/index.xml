@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>random on tulisan</title>
+    <link>https://tulisan.pages.dev/tags/random/</link>
+    <description>Recent content in random on tulisan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>id</language>
+    <lastBuildDate>Tue, 27 May 2025 10:00:00 +0700</lastBuildDate>
+    <atom:link href="https://tulisan.pages.dev/tags/random/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kenapa aku mulai nulis blog di 2025, dan kenapa kamu harusnya juga</title>
+      <link>https://tulisan.pages.dev/posts/mulai-nulis/</link>
+      <pubDate>Tue, 27 May 2025 10:00:00 +0700</pubDate>
+      <guid>https://tulisan.pages.dev/posts/mulai-nulis/</guid>
+      <description>Ini adalah isi konten pertama saya. Menulis blog adalah cara terbaik untuk menjernihkan pikiran.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tech on tulisan</title>
+    <link>https://tulisan.pages.dev/tags/tech/</link>
+    <description>Recent content in tech on tulisan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>id</language>
+    <lastBuildDate>Wed, 14 May 2025 10:00:00 +0700</lastBuildDate>
+    <atom:link href="https://tulisan.pages.dev/tags/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setup laptop hemat yang tetap produktif</title>
+      <link>https://tulisan.pages.dev/posts/setup-laptop/</link>
+      <pubDate>Wed, 14 May 2025 10:00:00 +0700</pubDate>
+      <guid>https://tulisan.pages.dev/posts/setup-laptop/</guid>
+      <description>Produktivitas tidak harus mahal.</description>
+    </item>
+  </channel>
+</rss>

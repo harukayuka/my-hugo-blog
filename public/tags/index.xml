@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on tulisan</title>
+    <link>https://tulisan.pages.dev/tags/</link>
+    <description>Recent content in Tags on tulisan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>id</language>
+    <lastBuildDate>Tue, 27 May 2025 10:00:00 +0700</lastBuildDate>
+    <atom:link href="https://tulisan.pages.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>random</title>
+      <link>https://tulisan.pages.dev/tags/random/</link>
+      <pubDate>Tue, 27 May 2025 10:00:00 +0700</pubDate>
+      <guid>https://tulisan.pages.dev/tags/random/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>kehidupan</title>
+      <link>https://tulisan.pages.dev/tags/kehidupan/</link>
+      <pubDate>Tue, 20 May 2025 10:00:00 +0700</pubDate>
+      <guid>https://tulisan.pages.dev/tags/kehidupan/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>tech</title>
+      <link>https://tulisan.pages.dev/tags/tech/</link>
+      <pubDate>Wed, 14 May 2025 10:00:00 +0700</pubDate>
+      <guid>https://tulisan.pages.dev/tags/tech/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

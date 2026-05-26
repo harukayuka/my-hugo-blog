@@ -1,0 +1,51 @@
+{{ define "main" }}
+    <!-- HERO POST -->
+    {{ range first 1 (where .Site.RegularPages "Type" "posts") }}
+    <section class="hero">
+      <p class="hero-label">✦ terbaru</p>
+      <h1>{{ .Title }}</h1>
+      <div class="hero-meta">
+        <span>{{ .Date.Format "02 January 2006" }}</span>
+        <span class="dot"></span>
+        <span>{{ .ReadingTime }} menit baca</span>
+        {{ with .Params.tags }}
+        <span class="dot"></span>
+        <span>{{ index . 0 }}</span>
+        {{ end }}
+      </div>
+      <a href="{{ .RelPermalink }}" class="read-btn">
+        baca sekarang
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </section>
+    {{ end }}
+
+    <!-- POST LIST -->
+    <div class="posts">
+      <p class="section-label">— tulisan lainnya</p>
+
+      {{ range after 1 (where .Site.RegularPages "Type" "posts") }}
+      <a class="post-item" href="{{ .RelPermalink }}">
+        <div class="post-date">{{ .Date.Format "02 Jan" }}<br/>{{ .Date.Format "2006" }}</div>
+        <div class="post-body">
+          <div>
+            <div class="post-title">{{ .Title }}</div>
+            {{ with .Params.tags }}
+            <span class="post-tag">{{ index . 0 }}</span>
+            {{ end }}
+          </div>
+          <span class="post-arrow">→</span>
+        </div>
+      </a>
+      {{ end }}
+    </div>
+
+    <!-- ABOUT -->
+    <div class="about-strip">
+      <p>
+        {{ .Site.Params.about | safeHTML }}
+      </p>
+    </div>
+{{ end }}

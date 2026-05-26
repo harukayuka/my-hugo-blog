@@ -1,0 +1,9 @@
+baseURL = 'https://tulisan.pages.dev/'
+languageCode = 'id'
+title = 'tulisan'
+
+[params]
+  description = 'catatan random dari kepala yang penuh'
+  about = 'Halo! Blog ini diisi sama <strong>tulisan-tulisan random</strong> — dari tech, opini, sampai hal-hal receh yang menarik perhatianku. Nggak ada tema besar, cuma nulis apa yang ada di kepala. Kalau kamu suka baca hal-hal seperti itu, <strong>selamat datang.</strong>'
+  github = 'https://github.com/'
+  email = 'hello@example.com'

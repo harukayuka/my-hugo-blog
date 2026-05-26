@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tulisan</title>
+    <link>https://tulisan.pages.dev/</link>
+    <description>Recent content on tulisan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>id</language>
+    <lastBuildDate>Tue, 27 May 2025 10:00:00 +0700</lastBuildDate>
+    <atom:link href="https://tulisan.pages.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kenapa aku mulai nulis blog di 2025, dan kenapa kamu harusnya juga</title>
+      <link>https://tulisan.pages.dev/posts/mulai-nulis/</link>
+      <pubDate>Tue, 27 May 2025 10:00:00 +0700</pubDate>
+      <guid>https://tulisan.pages.dev/posts/mulai-nulis/</guid>
+      <description>Ini adalah isi konten pertama saya. Menulis blog adalah cara terbaik untuk menjernihkan pikiran.</description>
+    </item>
+    <item>
+      <title>Hal-hal kecil yang bikin hari jadi lebih baik</title>
+      <link>https://tulisan.pages.dev/posts/hal-kecil/</link>
+      <pubDate>Tue, 20 May 2025 10:00:00 +0700</pubDate>
+      <guid>https://tulisan.pages.dev/posts/hal-kecil/</guid>
+      <description>Kadang hal kecil seperti kopi di pagi hari bisa merubah segalanya.</description>
+    </item>
+    <item>
+      <title>Setup laptop hemat yang tetap produktif</title>
+      <link>https://tulisan.pages.dev/posts/setup-laptop/</link>
+      <pubDate>Wed, 14 May 2025 10:00:00 +0700</pubDate>
+      <guid>https://tulisan.pages.dev/posts/setup-laptop/</guid>
+      <description>Produktivitas tidak harus mahal.</description>
+    </item>
+  </channel>
+</rss>
